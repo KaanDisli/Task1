@@ -20,18 +20,16 @@ class Books:
         SELECT MAX(id) FROM books 
                          """)
         query_result = self.cur.fetchone()
-        if query_result == None:
+        if query_result == (None,):
             return 0
         return query_result[0]
 
     def add_book(self,body):
         try:
             print(body)
-            print("Test 1")
-            self.highest_id +=1
-            print("Test 2") 
+            print(self.highest_id)
+            self.highest_id = self.highest_id + 1
             self.cur.execute("INSERT into books (id,title,author,price) VALUES(%s,%s,%s,%s)", (self.highest_id,body["title"],body["author"],body["price"]) )
-            print("Test 3")
             self.conn.commit()
         except Exception as e:
             print("There was an error inserting the book: ", e)
@@ -45,8 +43,6 @@ class Books:
             query_result = self.cur.fetchone()
             if query_result == None:
                 return -1
-            print("query_result")
-            print(query_result)
             data = {"id" : query_result[0],
                     "title": query_result[1],
                     "author": query_result[2],
@@ -60,7 +56,7 @@ class Books:
     
     def delete_book(self,book_id):
         try:
-            self.cur.execute("DELETE * FROM books WHERE books.id = %s",book_id)
+            self.cur.execute("DELETE FROM books WHERE books.id = (%s)",(book_id,))
             affected_rows = self.cur.rowcount
             self.conn.commit()
         except Exception as e: 

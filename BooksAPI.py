@@ -57,14 +57,17 @@ def getBook(book_id):
 
     return data
 
-@app.route("/api/delete/<book_id>",methods=["POST"])
+@app.route("/api/delete/<book_id>",methods=["DELETE"])
 def deleteBook(book_id):
     if books.delete_book(book_id):
-        return {status: "200", "message": "Book Succesfully deleted"}
+        return {"status": "200", "message": "Book Succesfully deleted"}
     else:
-        return {status: "404" , "message": "There was an error deleting the book"}
+        return {"status": "404" , "message": "There was an error deleting the book"}
 
 if __name__ == "__main__":
 
     app.run(debug = True)
+    
+
+
     
