@@ -54,6 +54,21 @@ class Books:
             return False
         return data
     
+    def get_all_books(self):
+        ###MAKE SURE TO PREVENT SQL INJECTION
+        try:
+            self.cur.execute("SELECT * FROM books")
+            query_result = self.cur.fetchall()
+            print("query_result")
+            print(query_result)
+            if query_result == None:
+                return -1
+
+        except Exception as e:
+            print("There was an error querying the book: ", e)
+            return False
+        return query_result
+    
     def delete_book(self,book_id):
         try:
             self.cur.execute("DELETE FROM books WHERE books.id = (%s)",(book_id,))

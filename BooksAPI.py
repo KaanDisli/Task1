@@ -5,6 +5,19 @@ import json
 app = Flask(__name__)
 books = book_service.Books()  
 status = True
+
+def search_id_list(id,list):
+
+    for elem in list:
+        print("elem: ", elem)
+        id_, title, author, price = elem
+  
+        if id_ == id:
+            
+            return elem
+    return {"status": 403, "message":"Book does not exist"}
+
+
 def fetch_data(*, update: bool = False, json_cache, method: bool = "GET",book_id):
     if update: 
         json_data = None  
@@ -12,7 +25,9 @@ def fetch_data(*, update: bool = False, json_cache, method: bool = "GET",book_id
         try:
             with open(json_cache,"r") as file:
                 json_data = json.load(file)
+
                 print("Fetched data from local cache")
+                return search_id_list(book_id,json_data) 
         except(FileNotFoundError,json.JSONDecodeError) as e:
             print(f'Problem with local cache:  {e}')
             json_data = None 
@@ -20,13 +35,11 @@ def fetch_data(*, update: bool = False, json_cache, method: bool = "GET",book_id
     if json_data == None:
         print("Creating Local cache ")
         if method == "GET":
-            json_data = books.get_book(book_id)
-            if json_data == -1: 
-                return {status: 403, "message":"Book does not exist"}
+            json_data = books.get_all_books()                
             with open(json_cache,"w") as file: 
                 json.dump(json_data,file)
          
-    return json_data
+    return search_id_list(book_id,json_data) 
 
 
 @app.route("/")
@@ -36,9 +49,10 @@ def home():
 @app.route("/api/add",methods=["POST"])
 def addBook():
     global status 
-    status = True
+    
     body = request.json   
     if books.add_book(body): 
+        status = True
         return {"status": "201" , "message": "Book Succesfully added"}
     else:
         return {"status": "404" , "message": "There was an error adding the book"}
@@ -60,6 +74,7 @@ def getBook(book_id):
 @app.route("/api/delete/<book_id>",methods=["DELETE"])
 def deleteBook(book_id):
     if books.delete_book(book_id):
+        status = True
         return {"status": "200", "message": "Book Succesfully deleted"}
     else:
         return {"status": "404" , "message": "There was an error deleting the book"}
