@@ -70,7 +70,6 @@ def search_id_list(id,list):
     return False, {"status": 403, "message":"Book does not exist"}
 
 def search_category_cache(category,list):
-    print("THis is the category: ", category)
     new_list = []
     for elem in list:
         id_, title_, author_, price_, category_ = elem
@@ -83,15 +82,13 @@ def search_category_cache(category,list):
     json_string = json.dumps(new_list)
     if new_list != []:
         log(f"Book with category: {category} was found in local cache ")
+        
         return True, json_string
     else:
         return False, json_string
 
 def fetch_data(*,cache,json_cache, method = "GET",book_id,category):
     #if the cache has expired we need to make a db query for the json data
-    print("category in fetchdata: ", category)
-    print("book_id in fetchdata: ", book_id)
-    print("method in fetchdata: ", method )
     if cache['not_expired'] != True: 
         json_data = None  
     else:
@@ -103,10 +100,12 @@ def fetch_data(*,cache,json_cache, method = "GET",book_id,category):
                 log("Fetched books from local cache")
                 #if the book can be found in the local cache we return it, if not we expire the timer on the cache make a db query
                 if category == None:
-                    print("INSIDE NONE")
                     status, message =  search_id_list(book_id,json_data) 
                 else:
-                    status, message =  search_category_cache(category,json_data) 
+                    json_data = books.get_all_books()
+                    with open("bookcache.json","w") as file:
+                        json.dump(json_data,file)
+                    status, message =  False, ""
                 if status:
                     return message
                 else:
@@ -130,7 +129,6 @@ def fetch_data(*,cache,json_cache, method = "GET",book_id,category):
                 json.dump(json_data,file)
     #after making our query and writing it in the local cache we return if it is present as a book or not    
     if category == None:
-        print("INSIDE NONE")
         status, message =  search_id_list(book_id,json_data) 
     else: 
         status, message =  search_category_cache(category,json_data) 
@@ -153,8 +151,6 @@ def check_params_add(body):
 def addBook():
     log("request recieved on /api/add")
     body = request.json   
-    print("body: ", body)
-    
     if not check_params_add(body):
         return {"status": 400 , "message":"Missing parameters" }
     if books.add_book(body): 
@@ -173,8 +169,6 @@ def getBook(book_id):
 
 @app.route("/api/get/category/<category>",methods=["GET"])
 def getCategory(category):
-    print("Category here: ", category)
-    print("WE ARE HERE")
     log(f"request recieved on /api/get/category/{category}")
     json_cache = "bookcache.json"
     data = fetch_data(cache=cache,json_cache=json_cache,method="GET",book_id=None,category=category)

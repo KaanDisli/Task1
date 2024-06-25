@@ -300,3 +300,73 @@ Book with category: School was found in local cache  : 14:47:44.050961
 request recieved on /api/get/category/Novel : 14:48:01.212744
 Fetched books from local cache : 14:48:01.215747
 Book with category: Novel was found in local cache  : 14:48:01.216746
+request recieved on /api/get/category/Novel : 14:55:58.402918
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:55:58.405920
+Creating Local cache : 14:55:58.407921
+Book with category: Novel was found in local cache  : 14:55:58.410920
+request recieved on /api/get/category/Novel : 14:56:08.233920
+Fetched books from local cache : 14:56:08.236924
+Creating Local cache : 14:56:08.238923
+Book with category: Novel was found in local cache  : 14:56:08.240924
+request recieved on /api/add : 14:56:17.265295
+A book was added to the db  : 14:56:17.332288
+request recieved on /api/add : 14:56:18.726757
+A book was added to the db  : 14:56:18.729757
+request recieved on /api/get/category/Fiction : 14:56:26.270699
+Fetched books from local cache : 14:56:26.272700
+Creating Local cache : 14:56:26.274703
+Book with category: Fiction was found in local cache  : 14:56:26.277701
+request recieved on /api/delete/3 : 14:56:48.215865
+request recieved on /api/add : 14:57:02.079097
+A book was added to the db  : 14:57:02.085367
+request recieved on /api/add : 14:57:16.993383
+A book was added to the db  : 14:57:16.997383
+request recieved on /api/get/2 : 14:57:21.267105
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:57:21.269103
+Creating Local cache : 14:57:21.271108
+Book with id: 2 was found in local cache  : 14:57:21.315331
+request recieved on /api/add : 14:59:22.910089
+A book was added to the db  : 14:59:22.918090
+request recieved on /api/add : 14:59:25.376089
+A book was added to the db  : 14:59:25.405093
+request recieved on /api/add : 14:59:27.537278
+A book was added to the db  : 14:59:27.541279
+request recieved on /api/add : 14:59:29.417881
+A book was added to the db  : 14:59:29.432045
+request recieved on /api/add : 14:59:30.770077
+A book was added to the db  : 14:59:30.774078
+request recieved on /api/add : 14:59:31.652861
+A book was added to the db  : 14:59:31.656865
+request recieved on /api/get/category/Fiction : 14:59:36.514923
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:59:36.516923
+Creating Local cache : 14:59:36.518925
+Book with category: Fiction was found in local cache  : 14:59:36.523923
+request recieved on /api/get/category/School : 14:59:45.439115
+Fetched books from local cache : 14:59:45.441117
+Creating Local cache : 14:59:45.445118
+Book with category: School was found in local cache  : 14:59:45.450117
+request recieved on /api/add : 15:00:11.644094
+A book was added to the db  : 15:00:11.648093
+request recieved on /api/get/category/Fiction : 15:00:33.173371
+Fetched books from local cache : 15:00:33.176370
+Creating Local cache : 15:00:33.178371
+Book with category: Fiction was found in local cache  : 15:00:33.182372
+request recieved on /api/get/category/Fiction : 15:03:05.856386
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 15:03:05.858388
+Creating Local cache : 15:03:05.860388
+Book with category: Fiction was found in local cache  : 15:03:05.863388
+request recieved on /api/delete/2 : 15:03:25.852257
+Book with id: 2 was removed from cache  : 15:03:25.855258
+Book with id: 2 was removed from the db : 15:03:25.867259
+request recieved on /api/get/category/Nove : 15:03:32.269951
+Fetched books from local cache : 15:03:32.271951
+Creating Local cache : 15:03:32.275951
+request recieved on /api/get/category/Novel : 15:03:50.533185
+Fetched books from local cache : 15:03:50.535187
+Creating Local cache : 15:03:50.540189
+request recieved on /api/add : 15:03:56.641520
+A book was added to the db  : 15:03:56.651518
+request recieved on /api/get/category/Novel : 15:04:01.117165
+Fetched books from local cache : 15:04:01.120166
+Creating Local cache : 15:04:01.124168
+Book with category: Novel was found in local cache  : 15:04:01.128167
