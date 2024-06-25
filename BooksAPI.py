@@ -113,11 +113,22 @@ def fetch_data(*,cache,json_cache, method: bool = "GET",book_id):
 def home(): 
     return "Welcome to BookStoreAPI"
 
+
+def check_params_add(body):
+    l = ['title','author','price']
+    for elem in l: 
+        if elem not in body:
+            return False
+    return True
 #endpoint for adding a book
 @app.route("/api/add",methods=["POST"])
 def addBook():
     log("request recieved on /api/add")
     body = request.json   
+    print("body: ", body)
+    
+    if not check_params_add(body):
+        return {"status": 400 , "message":"Missing parameters" }
     if books.add_book(body): 
         log("A book was added to the db ")
         return {"status": "201" , "message": "Book Succesfully added"}
@@ -153,6 +164,8 @@ def deleteBook(book_id):
 def updateBook(book_id):
     log(f"request recieved on /api/update/{book_id}")
     body = request.json 
+    if not check_params_add(body):
+        return {"status": 400 , "message":"Missing parameters" }
     with open("bookcache.json","r") as file:
         json_data = json.load(file)
     update_in_cache(book_id,json_data,body["title"],body["author"],body["price"])
