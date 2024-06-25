@@ -85,10 +85,12 @@ class Books:
         return True
     
     def update_book(self,book_id,title,author,price,category):
+        print("we arrived at update_book")
         try:
             self.cur.execute("UPDATE books SET title = (%s), author = (%s), price = (%s), category =(%s) WHERE books.id = (%s)",(title,author,price,category,book_id,))
             affected_rows = self.cur.rowcount
             self.conn.commit()
+            
         except Exception as e: 
             print("There was an error updating the book: ", e)
             return False

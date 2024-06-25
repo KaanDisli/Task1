@@ -370,3 +370,166 @@ request recieved on /api/get/category/Novel : 15:04:01.117165
 Fetched books from local cache : 15:04:01.120166
 Creating Local cache : 15:04:01.124168
 Book with category: Novel was found in local cache  : 15:04:01.128167
+request recieved on /api/add : 15:34:56.006470
+A book was added to the db  : 15:34:56.085425
+request recieved on /api/add : 15:34:59.724081
+A book was added to the db  : 15:34:59.728081
+request recieved on /api/add : 15:35:02.030345
+A book was added to the db  : 15:35:02.035345
+request recieved on /api/add : 15:35:04.061428
+A book was added to the db  : 15:35:04.066427
+request recieved on /api/add : 15:35:06.626413
+request recieved on /api/get/2 : 15:35:09.023415
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 15:35:09.025414
+Creating Local cache : 15:35:09.028416
+Book with id: 2 was found in local cache  : 15:35:09.067475
+request recieved on /api/delete/2 : 15:35:22.389205
+Book with id: 2 was removed from cache  : 15:35:22.392204
+Book with id: 2 was removed from the db : 15:35:22.543452
+request recieved on /api/add : 15:35:44.249657
+A book was added to the db  : 15:35:44.271656
+request recieved on /api/get/category/Novel : 15:35:47.698214
+Fetched books from local cache : 15:35:47.702216
+Creating Local cache : 15:35:47.707218
+Book with category: Novel was found in local cache  : 15:35:47.714214
+request recieved on /api/get/category/Novel : 15:36:17.818786
+Fetched books from local cache : 15:36:17.820784
+Creating Local cache : 15:36:17.825785
+Book with category: Novel was found in local cache  : 15:36:17.830786
+request recieved on /api/update/4 : 15:36:33.229484
+Book  with id: 4 was updated in cache.
+ Previously: [4, 'Matematik', 'MEB', 25, 'School'] 
+ Now: (4, 'Matematik', 'MEB', 0, 'School') : 15:36:33.231487
+Book with id: 4 was updated in the db : 15:36:33.272417
+request recieved on /api/get/category/Novel : 15:36:44.243483
+Fetched books from local cache : 15:36:44.245483
+Creating Local cache : 15:36:44.250489
+Book with category: Novel was found in local cache  : 15:36:44.256485
+request recieved on /api/user/register : 16:30:52.814963
+User {firstname} {lastname} was added to the db  : 16:30:52.900964
+request recieved on /api/add/{user_id} : 16:46:27.849581
+A book was added to the db by {user_id}  : 16:46:27.914583
+request recieved on /api/add/{user_id} : 16:47:06.566471
+A book was added to the db by {user_id}  : 16:47:06.574471
+request recieved on /api/add/{user_id} : 16:47:25.545887
+A book was added to the db by {user_id}  : 16:47:25.551888
+request recieved on /api/add/{user_id} : 16:47:51.525828
+A book was added to the db by {user_id}  : 16:47:51.532830
+request recieved on /api/add/{user_id} : 16:48:34.833012
+A book was added to the db by 1  : 16:48:34.843018
+request recieved on /api/add/{user_id} : 16:50:47.138947
+A book was added to the db by 1  : 16:50:47.206950
+request recieved on /api/add/{user_id} : 16:51:31.964633
+A book was added to the db by 1  : 16:51:31.969635
+request recieved on /api/add/{user_id} : 17:00:37.954494
+A book was added to the db by 1  : 17:00:38.048503
+request recieved on /api/add/{user_id} : 17:00:40.845712
+A book was added to the db by 1  : 17:00:40.849714
+request recieved on /api/add/{user_id} : 17:00:43.136881
+A book was added to the db by 1  : 17:00:43.142882
+request recieved on /api/add/{user_id} : 17:00:45.252039
+A book was added to the db by 1  : 17:00:45.257040
+request recieved on /api/add/{user_id} : 17:00:50.722448
+request recieved on /api/get/2 : 17:00:58.817055
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 17:00:58.819051
+Creating Local cache : 17:00:58.821055
+Book with id: 2 was found in local cache  : 17:00:58.824072
+request recieved on /api/get/category/Novel : 17:01:02.824353
+Fetched books from local cache : 17:01:02.826351
+Creating Local cache : 17:01:02.830356
+Book with category: Novel was found in local cache  : 17:01:02.835353
+request recieved on /api/delete/2/1 : 17:01:08.119746
+Book with id: 2 was removed from cache  : 17:01:08.121746
+Book with id: 2 was removed from the db : 17:01:08.258757
+request recieved on /api/get/2 : 17:01:13.647162
+Fetched books from local cache : 17:01:13.650162
+Creating Local cache : 17:01:13.652163
+request recieved on /api/update/4 : 17:01:19.819622
+Book  with id: 4 was updated in cache.
+ Previously: [4, 'Matematik', 'MEB', 25, 'School'] 
+ Now: (4, 'Matematik', 'MEB', 0, 'School') : 17:01:19.821623
+Book with id: 4 was updated in the db : 17:01:19.829620
+request recieved on /api/user/register : 17:01:27.413189
+User {firstname} {lastname} was added to the db  : 17:01:27.420189
+request recieved on /api/add/{user_id} : 17:07:51.839243
+A book was added to the db by 1  : 17:07:51.928248
+request recieved on /api/add/{user_id} : 17:07:55.861543
+A book was added to the db by 1  : 17:07:55.865543
+request recieved on /api/add/{user_id} : 17:09:00.418619
+A book was added to the db by 1  : 17:09:00.426616
+request recieved on /api/add/{user_id} : 17:09:21.326176
+A book was added to the db by 1  : 17:09:21.337177
+request recieved on /api/add/{user_id} : 17:09:47.951164
+request recieved on /api/add/{user_id} : 17:10:32.461490
+request recieved on /api/add/{user_id} : 17:10:36.225770
+request recieved on /api/user/register : 17:10:41.184141
+User {firstname} {lastname} was added to the db  : 17:10:41.196142
+request recieved on /api/update/4 : 17:10:47.317598
+request recieved on /api/update/4 : 17:10:51.628920
+request recieved on /api/update/4 : 17:12:28.625166
+request recieved on /api/update/4 : 17:12:44.446348
+request recieved on /api/add/{user_id} : 17:12:59.020436
+A book was added to the db by 1  : 17:12:59.090441
+request recieved on /api/add/{user_id} : 17:13:02.177670
+A book was added to the db by 1  : 17:13:02.186673
+request recieved on /api/user/register : 17:13:07.271050
+User {firstname} {lastname} was added to the db  : 17:13:07.283051
+request recieved on /api/update/4 : 17:13:13.053481
+request recieved on /api/update/4 : 17:13:15.651677
+request recieved on /api/delete/2/1 : 17:13:25.171223
+request recieved on /api/get/category/Novel : 17:13:30.401611
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 17:13:30.403613
+Creating Local cache : 17:13:30.405612
+Book with category: Novel was found in local cache  : 17:13:30.408612
+request recieved on /api/update/4 : 17:14:12.371747
+request recieved on /api/update/4 : 17:15:45.349692
+request recieved on /api/update/4 : 17:16:12.009878
+request recieved on /api/update/4 : 17:16:52.475903
+request recieved on /api/update/4 : 17:19:29.198116
+request recieved on /api/get/2 : 17:20:01.076495
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 17:20:01.078496
+Creating Local cache : 17:20:01.080498
+Book with id: 2 was found in local cache  : 17:20:01.084497
+request recieved on /api/update/4 : 17:20:10.775221
+Book  with id: 4 was updated in cache.
+ Previously: [4, 'Satranc', 'Stefan Zweig', 15, 'Novel'] 
+ Now: (4, 'Matematik', 'MEB', 0, 'School') : 17:20:10.779221
+Book with id: 4 was updated in the db : 17:20:10.909232
+request recieved on /api/delete/2/1 : 17:22:11.938290
+request recieved on /api/delete/2/1 : 17:22:52.128290
+request recieved on /api/get/2 : 17:23:09.408581
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 17:23:09.410581
+Creating Local cache : 17:23:09.412583
+Book with id: 2 was found in local cache  : 17:23:09.415584
+request recieved on /api/delete/2/1 : 17:23:23.089605
+Book with id: 2 was removed from cache  : 17:23:23.093605
+Book with id: 2 was removed from the db : 17:23:23.178610
+request recieved on /api/add/{user_id} : 17:24:16.247544
+A book was added to the db by 1  : 17:24:16.256545
+request recieved on /api/user/register : 17:26:14.676246
+request recieved on /api/user/register : 17:26:29.466476
+User {firstname} {lastname} was added to the db  : 17:26:29.506475
+request recieved on /api/delete/1/1 : 17:26:38.793168
+request recieved on /api/add/{user_id} : 17:26:49.088936
+request recieved on /api/add/{user_id} : 17:26:52.285175
+A book was added to the db by 1  : 17:26:52.292174
+request recieved on /api/get/2 : 17:26:56.278472
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 17:26:56.280472
+Creating Local cache : 17:26:56.282474
+request recieved on /api/get/3 : 17:27:02.635947
+Fetched books from local cache : 17:27:02.638949
+Book with id: 3 was found in local cache  : 17:27:02.640949
+request recieved on /api/get/category/Novel : 17:27:05.569167
+Fetched books from local cache : 17:27:05.572167
+Creating Local cache : 17:27:05.576168
+Book with category: Novel was found in local cache  : 17:27:05.579168
+request recieved on /api/delete/1/1 : 17:27:10.284520
+Book with id: 1 was removed from cache  : 17:27:10.290520
+Book with id: 1 was removed from the db : 17:27:10.345522
+request recieved on /api/get/category/Novel : 17:27:14.898863
+Fetched books from local cache : 17:27:14.901865
+Creating Local cache : 17:27:14.906868
+Book with category: Novel was found in local cache  : 17:27:14.909864
+request recieved on /api/get/1 : 17:27:21.474356
+Fetched books from local cache : 17:27:21.477355
+Creating Local cache : 17:27:21.479356
