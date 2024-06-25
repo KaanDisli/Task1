@@ -533,3 +533,25 @@ Book with category: Novel was found in local cache  : 17:27:14.909864
 request recieved on /api/get/1 : 17:27:21.474356
 Fetched books from local cache : 17:27:21.477355
 Creating Local cache : 17:27:21.479356
+request recieved on /api/user/register : 17:29:48.837281
+User {firstname} {lastname} was added to the db  : 17:29:48.925290
+request recieved on /api/delete/1/5 : 17:29:53.204612
+request recieved on /api/delete/5/2 : 17:29:58.278989
+request recieved on /api/get/1 : 17:30:03.438374
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 17:30:03.440374
+Creating Local cache : 17:30:03.442374
+request recieved on /api/get/2 : 17:30:07.585685
+Fetched books from local cache : 17:30:07.589685
+Creating Local cache : 17:30:07.591686
+request recieved on /api/get/3 : 17:30:09.673839
+Fetched books from local cache : 17:30:09.675839
+Book with id: 3 was found in local cache  : 17:30:09.676840
+request recieved on /api/delete/5/2 : 17:30:13.862152
+Book with id: 5 was removed from cache  : 17:30:13.866153
+Book with id: 5 was removed from the db : 17:30:13.873152
+request recieved on /api/update/7 : 17:35:06.010869
+Book with id: 7 was updated in the db : 17:35:06.111875
+request recieved on /api/delete/5/2 : 17:35:11.474277
+request recieved on /api/delete/5/27 : 17:35:24.773268
+request recieved on /api/delete/7/2 : 17:35:27.949507
+Book with id: 7 was removed from the db : 17:35:27.954507

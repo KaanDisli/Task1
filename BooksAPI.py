@@ -74,8 +74,11 @@ def deleteBook(book_id,user_id):
     if not users.check_user_exists(user_id):
         return {"status": 400 , "message":"User doesn't exist" }
     #if the  deleted bookid is present in cache we remove it from cache
-    with open("bookcache.json","r") as file:
-        json_data = json.load(file)
+    try:
+        with open("bookcache.json","r") as file:
+            json_data = json.load(file)
+    except Exception:
+        json_data = None
     if json_data is not None:
         book_functions.remove_from_cache(book_id,json_data)
     if books.delete_book(book_id):
@@ -100,8 +103,8 @@ def updateBook(book_id,user_id):
     try:
         with open("bookcache.json","r") as file:
             json_data = json.load(file)
-    except Exception as e:
-        print("problem: ", e)
+    except Exception:
+        json_data = None
     if json_data is not None:
         book_functions.update_in_cache(book_id,json_data,body["title"],body["author"],body["price"],body["category"])
     if books.update_book(book_id,body["title"],body["author"],body["price"],body["category"]):

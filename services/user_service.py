@@ -50,7 +50,7 @@ class Users:
         except Exception as e:
             print("There was an error creating the user: ", e)
             return False
-        self.add_log("User with name {firstname} and lastname {lastname} was created")
+        self.add_log(f"User with name {firstname} and lastname {lastname} was created")
         return True
 
     def check_user_exists(self,user_id):
