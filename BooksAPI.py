@@ -22,16 +22,16 @@ def log(message):
 
 
 #we update the book with the id passed as parameter from the cache
-def update_in_cache(id,list,title,author,price):
+def update_in_cache(id,list,title,author,price,category):
     duplicate_list = copy.deepcopy(list)
     id = int(id)
     for elem in list:
-        id_, title_, author_, price_ = elem
+        id_, title_, author_, price_, category_ = elem
         if id_ == id:   
             #update the cache
             duplicate_list.remove(elem)
             log(f"Book  with id: {id} was updated in cache ")
-            duplicate_list.append((id ,title, author, price)) 
+            duplicate_list.append((id ,title, author, price,category)) 
             json_data = duplicate_list
             with open("bookcache.json","w") as file:
                 json.dump(json_data,file)
@@ -45,7 +45,7 @@ def remove_from_cache(id,list):
     duplicate_list = copy.deepcopy(list)
     id = int(id)
     for elem in list:
-        id_, title, author, price = elem
+        id_, title_, author_, price_, category_ = elem
         if id_ == id:   
             duplicate_list.remove(elem)
             log(f"Book with id: {id} was removed from cache ")
@@ -56,22 +56,42 @@ def remove_from_cache(id,list):
                 
     return False
 
+
 #Here we iterate over the books in the cache to see if the book with the id passed as a parameter exists
 def search_id_list(id,list):
     id = int(id)
     for elem in list:
-        id_, title, author, price = elem
+        id_, title, author, price, category = elem
         if id_ == id:   
             log(f"Book with id: {id} was found in local cache ")
             return True, {
-                "id":id,"title":title,"author":author,"price":price
+                "id":id,"title":title,"author":author,"price":price, "category":category
             }
     return False, {"status": 403, "message":"Book does not exist"}
 
+def search_category_cache(category,list):
+    print("THis is the category: ", category)
+    new_list = []
+    for elem in list:
+        id_, title_, author_, price_, category_ = elem
+        if category == category_:
+            new_list.append({
+                "id":id_,"title":title_,"author":author_,"price":price_, "category":category_
+            }
 
+            )
+    json_string = json.dumps(new_list)
+    if new_list != []:
+        log(f"Book with category: {category} was found in local cache ")
+        return True, json_string
+    else:
+        return False, json_string
 
-def fetch_data(*,cache,json_cache, method: bool = "GET",book_id):
+def fetch_data(*,cache,json_cache, method = "GET",book_id,category):
     #if the cache has expired we need to make a db query for the json data
+    print("category in fetchdata: ", category)
+    print("book_id in fetchdata: ", book_id)
+    print("method in fetchdata: ", method )
     if cache['not_expired'] != True: 
         json_data = None  
     else:
@@ -82,7 +102,11 @@ def fetch_data(*,cache,json_cache, method: bool = "GET",book_id):
                 print("Fetched data from local cache")
                 log("Fetched books from local cache")
                 #if the book can be found in the local cache we return it, if not we expire the timer on the cache make a db query
-                status, message =  search_id_list(book_id,json_data) 
+                if category == None:
+                    print("INSIDE NONE")
+                    status, message =  search_id_list(book_id,json_data) 
+                else:
+                    status, message =  search_category_cache(category,json_data) 
                 if status:
                     return message
                 else:
@@ -105,7 +129,11 @@ def fetch_data(*,cache,json_cache, method: bool = "GET",book_id):
                 #we write the new data into our local cache
                 json.dump(json_data,file)
     #after making our query and writing it in the local cache we return if it is present as a book or not    
-    status, message =  search_id_list(book_id,json_data) 
+    if category == None:
+        print("INSIDE NONE")
+        status, message =  search_id_list(book_id,json_data) 
+    else: 
+        status, message =  search_category_cache(category,json_data) 
     return message
 
 #the home page
@@ -115,7 +143,7 @@ def home():
 
 
 def check_params_add(body):
-    l = ['title','author','price']
+    l = ['title','author','price','category']
     for elem in l: 
         if elem not in body:
             return False
@@ -136,12 +164,22 @@ def addBook():
         return {"status": "404" , "message": "There was an error adding the book"}
 
 #endpoint for getting a book 
-@app.route("/api/get/<book_id>",methods=["GET"])
+@app.route("/api/get/book/<book_id>",methods=["GET"])
 def getBook(book_id):
     log(f"request recieved on /api/get/{book_id}")
     json_cache = "bookcache.json"
-    data = fetch_data(cache=cache,json_cache=json_cache,method="GET",book_id=book_id)
+    data = fetch_data(cache=cache,json_cache=json_cache,method="GET",book_id=book_id,category=None)
     return data
+
+@app.route("/api/get/category/<category>",methods=["GET"])
+def getCategory(category):
+    print("Category here: ", category)
+    print("WE ARE HERE")
+    log(f"request recieved on /api/get/category/{category}")
+    json_cache = "bookcache.json"
+    data = fetch_data(cache=cache,json_cache=json_cache,method="GET",book_id=None,category=category)
+    return data
+
 
 #endpoint for deleting a book
 @app.route("/api/delete/<book_id>",methods=["DELETE"])
@@ -168,8 +206,8 @@ def updateBook(book_id):
         return {"status": 400 , "message":"Missing parameters" }
     with open("bookcache.json","r") as file:
         json_data = json.load(file)
-    update_in_cache(book_id,json_data,body["title"],body["author"],body["price"])
-    if books.update_book(book_id,body["title"],body["author"],body["price"]):
+    update_in_cache(book_id,json_data,body["title"],body["author"],body["price"],body["category"])
+    if books.update_book(book_id,body["title"],body["author"],body["price"],body["category"]):
         log(f"Book with id: {book_id} was updated in the db")
         return {"status": "200", "message": "Book Succesfully updated"}
     else:

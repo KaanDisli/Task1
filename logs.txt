@@ -96,3 +96,207 @@ Book with id: 3 was removed from the db : 13:07:53.145710
 request recieved on /api/update/4 : 13:08:01.306939
 Book  with id: 4 was updated in cache  : 13:08:01.309937
 Book with id: 4 was updated in the db : 13:08:01.349947
+request recieved on /api/add : 13:20:18.723752
+A book was added to the db  : 13:20:18.801212
+request recieved on /api/add : 13:20:21.636535
+A book was added to the db  : 13:20:21.641535
+request recieved on /api/add : 13:20:23.618134
+A book was added to the db  : 13:20:23.622092
+request recieved on /api/add : 13:20:26.487798
+A book was added to the db  : 13:20:26.491532
+request recieved on /api/add : 13:20:37.649270
+request recieved on /api/get/1 : 13:20:42.041385
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 13:20:42.043385
+Creating Local cache : 13:20:42.044385
+Book with id: 1 was found in local cache  : 13:20:42.048386
+request recieved on /api/delete/3 : 13:21:13.023114
+Book with id: 3 was removed from cache  : 13:21:13.026908
+Book with id: 3 was removed from the db : 13:21:13.098591
+request recieved on /api/update/4 : 13:21:20.890757
+request recieved on /api/update/4 : 13:21:42.305264
+Book  with id: 4 was updated in cache  : 13:21:42.308262
+Book with id: 4 was updated in the db : 13:21:42.349982
+request recieved on /api/add : 13:40:34.626770
+A book was added to the db  : 13:40:34.700206
+request recieved on /api/add : 13:40:37.507996
+A book was added to the db  : 13:40:37.514995
+request recieved on /api/add : 13:40:40.720453
+A book was added to the db  : 13:40:40.724452
+request recieved on /api/add : 13:40:42.707135
+A book was added to the db  : 13:40:42.712134
+request recieved on /api/add : 13:40:45.184199
+request recieved on /api/get/1 : 13:40:48.497347
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 13:40:48.499345
+Creating Local cache : 13:40:48.501348
+Book with id: 1 was found in local cache  : 13:40:48.504345
+request recieved on /api/get/2 : 13:41:00.467476
+Fetched books from local cache : 13:41:00.470477
+Book with id: 2 was found in local cache  : 13:41:00.471476
+request recieved on /api/get/School : 13:41:18.827519
+Fetched books from local cache : 13:41:18.829521
+request recieved on /api/get/School : 13:44:25.163024
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 13:44:25.166025
+Creating Local cache : 13:44:25.168027
+request recieved on /api/get/School : 13:44:44.924083
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 13:44:44.929086
+Creating Local cache : 13:44:44.933084
+request recieved on /api/get/School : 13:46:42.887410
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 13:46:42.890413
+Creating Local cache : 13:46:42.911413
+request recieved on /api/get/School : 13:47:35.562461
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 13:47:35.565462
+Creating Local cache : 13:47:35.567463
+request recieved on /api/get/School : 14:00:58.142011
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:00:58.147011
+Creating Local cache : 14:00:58.149015
+request recieved on /api/get/School : 14:05:06.602547
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:05:06.606548
+Creating Local cache : 14:05:06.607546
+request recieved on /api/get/School : 14:07:07.119792
+request recieved on /api/get/School : 14:07:08.252354
+request recieved on /api/get/School : 14:07:43.599587
+request recieved on /api/get/School : 14:08:21.325807
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:08:21.328808
+Creating Local cache : 14:08:21.330810
+request recieved on /api/get/2 : 14:08:40.716412
+Fetched books from local cache : 14:08:40.724409
+Book with id: 2 was found in local cache  : 14:08:40.726412
+request recieved on /api/get/School : 14:08:49.892973
+Fetched books from local cache : 14:08:49.895975
+request recieved on /api/get/School : 14:09:22.951656
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:09:22.954655
+Creating Local cache : 14:09:22.956655
+request recieved on /api/get/School : 14:09:50.110815
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:09:50.113814
+Creating Local cache : 14:09:50.117815
+request recieved on /api/get/School : 14:10:25.951301
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:10:25.954303
+Creating Local cache : 14:10:25.956301
+request recieved on /api/get/School : 14:11:45.117672
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:11:45.119673
+Creating Local cache : 14:11:45.121671
+request recieved on /api/get/School : 14:11:46.349763
+Fetched books from local cache : 14:11:46.352765
+Creating Local cache : 14:11:46.354764
+request recieved on /api/get/School : 14:12:00.417988
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:12:00.421991
+Creating Local cache : 14:12:00.423990
+request recieved on /api/get/2 : 14:12:55.130676
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:12:55.133675
+Creating Local cache : 14:12:55.135675
+Book with id: 2 was found in local cache  : 14:12:55.141677
+request recieved on /api/get/2 : 14:12:58.517635
+Fetched books from local cache : 14:12:58.520638
+Book with id: 2 was found in local cache  : 14:12:58.522636
+request recieved on /api/get/category/School : 14:18:18.243336
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:18:18.247104
+Creating Local cache : 14:18:18.249104
+request recieved on /api/get/category/School : 14:19:43.321709
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:19:43.323707
+Creating Local cache : 14:19:43.326712
+Book with category: 0 was found in local cache  : 14:19:43.331709
+request recieved on /api/get/category/School : 14:20:04.215071
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:20:04.217070
+Creating Local cache : 14:20:04.219071
+Book with category: 0 was found in local cache  : 14:20:04.225071
+request recieved on /api/get/category/School : 14:21:10.794750
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:21:10.797749
+Creating Local cache : 14:21:10.799748
+Book with category: 0 was found in local cache  : 14:21:10.804751
+request recieved on /api/get/category/School : 14:21:49.454089
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:21:49.456091
+Creating Local cache : 14:21:49.458091
+Book with category: 0 was found in local cache  : 14:21:49.463093
+request recieved on /api/get/category/School : 14:23:11.793770
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:23:11.796772
+Creating Local cache : 14:23:11.798772
+Book with category: 0 was found in local cache  : 14:23:11.802773
+request recieved on /api/get/category/School : 14:23:50.354493
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:23:50.358495
+Creating Local cache : 14:23:50.360495
+Book with category: 0 was found in local cache  : 14:23:50.366496
+request recieved on /api/get/2 : 14:24:34.234581
+Fetched books from local cache : 14:24:34.238582
+Book with id: 2 was found in local cache  : 14:24:34.239582
+request recieved on /api/get/category/School : 14:24:37.383790
+Fetched books from local cache : 14:24:37.387788
+Book with category: 0 was found in local cache  : 14:24:37.389790
+request recieved on /api/get/category/School : 14:26:24.344641
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:26:24.347642
+Creating Local cache : 14:26:24.349642
+Book with category: 0 was found in local cache  : 14:26:24.352645
+request recieved on /api/get/2 : 14:26:26.937686
+Fetched books from local cache : 14:26:26.941686
+Book with id: 2 was found in local cache  : 14:26:26.943686
+request recieved on /api/get/category/School : 14:27:21.338777
+Fetched books from local cache : 14:27:21.340775
+Book with category: 0 was found in local cache  : 14:27:21.343776
+request recieved on /api/get/category/School : 14:27:34.594199
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:27:34.596543
+Creating Local cache : 14:27:34.599545
+Book with category: 1 was found in local cache  : 14:27:34.605548
+request recieved on /api/get/category/School : 14:27:57.950038
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:27:57.954038
+Creating Local cache : 14:27:57.956038
+Book with category: 1 was found in local cache  : 14:27:57.960039
+request recieved on /api/get/category/School : 14:28:33.917280
+request recieved on /api/get/category/School : 14:32:54.385658
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:32:54.388797
+Creating Local cache : 14:32:54.392138
+Book with category: None was found in local cache  : 14:32:54.533061
+request recieved on /api/get/2 : 14:32:58.597679
+Fetched books from local cache : 14:32:58.604681
+Book with id: 2 was found in local cache  : 14:32:58.606681
+request recieved on /api/get/category/School : 14:33:01.141933
+Fetched books from local cache : 14:33:01.144935
+Book with category: None was found in local cache  : 14:33:01.146935
+request recieved on /api/get/category/School : 14:33:49.728296
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:33:49.730484
+Creating Local cache : 14:33:49.732486
+Book with category: None was found in local cache  : 14:33:49.736485
+request recieved on /api/get/category/School : 14:35:07.581703
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:35:07.584705
+Creating Local cache : 14:35:07.585704
+Book with category: None was found in local cache  : 14:35:07.590703
+request recieved on /api/get/category/School : 14:35:41.168843
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:35:41.171846
+Creating Local cache : 14:35:41.174850
+Book with category: None was found in local cache  : 14:35:41.178846
+request recieved on /api/get/category/School : 14:35:54.216166
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:35:54.220167
+Creating Local cache : 14:35:54.222169
+Book with category: None was found in local cache  : 14:35:54.227166
+request recieved on /api/get/category/School : 14:36:26.618472
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:36:26.621474
+Creating Local cache : 14:36:26.623476
+Book with category: None was found in local cache  : 14:36:26.629476
+request recieved on /api/get/category/School : 14:36:39.376036
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:36:39.378038
+Creating Local cache : 14:36:39.380036
+request recieved on /api/get/category/School : 14:37:00.885501
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:37:00.888502
+Creating Local cache : 14:37:00.889502
+Book with category: School was found in local cache  : 14:37:00.894502
+request recieved on /api/delete/3 : 14:37:54.687877
+Book with id: 3 was removed from cache  : 14:37:54.689877
+Book with id: 3 was removed from the db : 14:37:54.800878
+request recieved on /api/get/category/School : 14:37:57.248901
+Fetched books from local cache : 14:37:57.251903
+Book with category: School was found in local cache  : 14:37:57.253903
+request recieved on /api/add : 14:38:27.458934
+A book was added to the db  : 14:38:27.464844
+request recieved on /api/get/category/School : 14:38:31.548605
+Fetched books from local cache : 14:38:31.550604
+Book with category: School was found in local cache  : 14:38:31.552605
+request recieved on /api/add : 14:38:43.905402
+A book was added to the db  : 14:38:43.912399
+request recieved on /api/get/category/School : 14:39:04.720892
+Fetched books from local cache : 14:39:04.724891
+Book with category: School was found in local cache  : 14:39:04.726891
+request recieved on /api/get/category/School : 14:47:43.993959
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 14:47:43.996168
+Creating Local cache : 14:47:43.998165
+Book with category: School was found in local cache  : 14:47:44.050961
+request recieved on /api/get/category/Novel : 14:48:01.212744
+Fetched books from local cache : 14:48:01.215747
+Book with category: Novel was found in local cache  : 14:48:01.216746

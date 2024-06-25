@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n                    \"title\": \"Bible\",\r\n                    \"author\": \"God\",\r\n                    \"price\": 10\r\n\r\n            }",
+					"raw": "{\r\n                    \"title\": \"White Fang\",\r\n                    \"author\": \"Jack London\",\r\n                    \"price\": 10,\r\n                    \"category\":\"Fiction\"\r\n\r\n            }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -45,7 +45,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n                    \"title\": \"Satranc\",\r\n                    \"author\": \"Stefan Zweig\",\r\n                    \"price\": 15\r\n\r\n            }",
+					"raw": "{\r\n                    \"title\": \"Satranc\",\r\n                    \"author\": \"Stefan Zweig\",\r\n                    \"price\": 15,\r\n                    \"category\":\"Novel\"\r\n\r\n            }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -77,7 +77,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n                    \"title\": \"Inklap tarihi 5\",\r\n                    \"author\": \"MEB\",\r\n                    \"price\": 20\r\n\r\n            }",
+					"raw": "{\r\n                    \"title\": \"Inklap tarihi 5\",\r\n                    \"author\": \"MEB\",\r\n                    \"price\": 20,\r\n                    \"category\":\"School\"\r\n\r\n            }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -109,7 +109,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n                    \"title\": \"Matematik\",\r\n                    \"author\": \"MEB\",\r\n                    \"price\": 25\r\n\r\n            }",
+					"raw": "{\r\n                    \"title\": \"Matematik\",\r\n                    \"author\": \"MEB\",\r\n                    \"price\": 25,\r\n                    \"category\": \"School\"\r\n\r\n            }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -167,7 +167,7 @@
 			"response": []
 		},
 		{
-			"name": "/api/get/<book_id>",
+			"name": "/api/get/book/<book_id>",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -185,6 +185,31 @@
 						"api",
 						"get",
 						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/get/category/<category>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/get/category/School",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"get",
+						"category",
+						"School"
 					]
 				}
 			},
@@ -221,7 +246,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n                    \"title\": \"Matematik\",\r\n                    \"author\": \"MEB\",\r\n                    \"price\": 0\r\n\r\n            }",
+					"raw": "{\r\n                    \"title\": \"Matematik\",\r\n                    \"author\": \"MEB\",\r\n                    \"price\": 0,\r\n                    \"category\":\"School\"\r\n\r\n            }",
 					"options": {
 						"raw": {
 							"language": "json"

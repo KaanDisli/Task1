@@ -9,7 +9,8 @@ class Books:
                     id INT PRIMARY KEY,
                     title VARCHAR(255),
                     author VARCHAR(255),
-                    price INT
+                    price INT,
+                    category VARCHAR(255)
                     );
 """)
         with open('bookcache.json', 'w') as f:
@@ -31,7 +32,7 @@ class Books:
             print(body)
             print(self.highest_id)
             self.highest_id = self.highest_id + 1
-            self.cur.execute("INSERT into books (id,title,author,price) VALUES(%s,%s,%s,%s)", (self.highest_id,body["title"],body["author"],body["price"]) )
+            self.cur.execute("INSERT into books (id,title,author,price,category) VALUES(%s,%s,%s,%s,%s)", (self.highest_id,body["title"],body["author"],body["price"],body["category"]) )
             self.conn.commit()
         except Exception as e:
             print("There was an error inserting the book: ", e)
@@ -49,6 +50,7 @@ class Books:
                     "title": query_result[1],
                     "author": query_result[2],
                     "price": query_result[3],
+                    "category":query_result[4]
 
             }
         except Exception as e:
@@ -61,8 +63,6 @@ class Books:
         try:
             self.cur.execute("SELECT * FROM books")
             query_result = self.cur.fetchall()
-            print("query_result")
-            print(query_result)
             if query_result == None:
                 return -1
 
@@ -84,9 +84,9 @@ class Books:
             return False
         return True
     
-    def update_book(self,book_id,title,author,price):
+    def update_book(self,book_id,title,author,price,category):
         try:
-            self.cur.execute("UPDATE books SET title = (%s), author = (%s), price = (%s) WHERE books.id = (%s)",(title,author,price,book_id,))
+            self.cur.execute("UPDATE books SET title = (%s), author = (%s), price = (%s), category =(%s) WHERE books.id = (%s)",(title,author,price,category,book_id,))
             affected_rows = self.cur.rowcount
             self.conn.commit()
         except Exception as e: 
