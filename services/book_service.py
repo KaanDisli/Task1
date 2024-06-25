@@ -12,6 +12,8 @@ class Books:
                     price INT
                     );
 """)
+        with open('bookcache.json', 'w') as f:
+            pass 
         self.conn.commit()
         self.highest_id = self.highest_id()
 
@@ -81,3 +83,17 @@ class Books:
             print("Book does not exist")
             return False
         return True
+    
+    def update_book(self,book_id,title,author,price):
+        try:
+            self.cur.execute("UPDATE books SET title = (%s), author = (%s), price = (%s) WHERE books.id = (%s)",(title,author,price,book_id,))
+            affected_rows = self.cur.rowcount
+            self.conn.commit()
+        except Exception as e: 
+            print("There was an error updating the book: ", e)
+            return False
+        if affected_rows != 1:
+            print("Book does not exist")
+            return False
+        return True
+

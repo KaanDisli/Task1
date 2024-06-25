@@ -1,0 +1,73 @@
+request recieved on /api/add : 11:37:46.272503
+A book was added to the db  : 11:37:46.383145
+request recieved on /api/add : 11:37:49.027788
+A book was added to the db  : 11:37:49.036787
+request recieved on /api/add : 11:37:53.376261
+A book was added to the db  : 11:37:53.389261
+request recieved on /api/add : 11:37:56.033211
+A book was added to the db  : 11:37:56.039212
+request recieved on /api/get/4 : 11:38:00.369411
+Fetched books from local cache : 11:38:00.372411
+Book with id: 4 was found in local cache  : 11:38:00.373412
+request recieved on /api/add : 11:41:39.989818
+A book was added to the db  : 11:41:40.035996
+request recieved on /api/add : 11:41:44.393966
+A book was added to the db  : 11:41:44.397967
+request recieved on /api/add : 11:41:46.960337
+A book was added to the db  : 11:41:46.965337
+request recieved on /api/add : 11:41:50.246630
+A book was added to the db  : 11:41:50.250633
+request recieved on /api/get/4 : 11:46:27.607886
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 11:46:27.610885
+Creating Local cache : 11:46:27.612886
+Book with id: 4 was found in local cache  : 11:46:27.616888
+request recieved on /api/get/3 : 11:46:40.978666
+Fetched books from local cache : 11:46:40.981855
+Book with id: 3 was found in local cache  : 11:46:40.982856
+request recieved on /api/delete/3 : 11:47:48.406416
+A book with id: 3 was removed from cache  : 11:47:48.409667
+A book with id: 3 was removed from the db : 11:47:48.489065
+request recieved on /api/get/3 : 11:47:59.167290
+Fetched books from local cache : 11:47:59.169289
+Creating Local cache : 11:47:59.171290
+request recieved on /api/get/4 : 11:48:05.420342
+Fetched books from local cache : 11:48:05.423345
+Book with id: 4 was found in local cache  : 11:48:05.424344
+request recieved on /api/update/4 : 11:48:10.616873
+A book  with id: 4 was updated in cache  : 11:48:10.618875
+A book with id: 4 was updated in the db : 11:48:10.622875
+request recieved on /api/get/4 : 11:48:12.925277
+Fetched books from local cache : 11:48:12.929278
+Book with id: 4 was found in local cache  : 11:48:12.931279
+request recieved on /api/add : 11:49:50.032297
+A book was added to the db  : 11:49:50.092947
+request recieved on /api/get/1 : 11:50:02.790775
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 11:50:02.793776
+Creating Local cache : 11:50:02.795776
+Book with id: 1 was found in local cache  : 11:50:02.801777
+request recieved on /api/add : 11:50:12.052304
+A book was added to the db  : 11:50:12.055301
+request recieved on /api/add : 11:50:14.479327
+A book was added to the db  : 11:50:14.485326
+request recieved on /api/add : 11:50:17.585504
+A book was added to the db  : 11:50:17.589536
+request recieved on /api/get/4 : 11:50:27.541301
+Fetched books from local cache : 11:50:27.544302
+Creating Local cache : 11:50:27.545301
+Book with id: 4 was found in local cache  : 11:50:27.550304
+request recieved on /api/delete/3 : 11:50:33.266320
+Book with id: 3 was removed from cache  : 11:50:33.269321
+A book with id: 3 was removed from the db : 11:50:33.276322
+request recieved on /api/update/4 : 11:50:36.164463
+Book  with id: 4 was updated in cache  : 11:50:36.166463
+A book with id: 4 was updated in the db : 11:50:36.170464
+request recieved on /api/get/4 : 11:52:22.153901
+Problem with local cache:  Expecting value: line 1 column 1 (char 0) : 11:52:22.155900
+Creating Local cache : 11:52:22.157901
+Book with id: 4 was found in local cache  : 11:52:22.162902
+request recieved on /api/get/2 : 11:52:51.234424
+Fetched books from local cache : 11:52:51.238574
+Book with id: 2 was found in local cache  : 11:52:51.239573
+request recieved on /api/get/1 : 11:53:03.282337
+Fetched books from local cache : 11:53:03.286338
+Book with id: 1 was found in local cache  : 11:53:03.288341
