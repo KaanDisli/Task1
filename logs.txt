@@ -879,3 +879,6 @@ request recieved on /api/get/category/School : 15:52:51.227537
 Fetched books from local cache : 15:52:51.229539
 Creating Local cache : 15:52:51.231539
 Book with category: School was found in local cache  : 15:52:51.234540
+request recieved on /api/get/1 : 15:54:33.724663
+Fetched books from local cache : 15:54:35.811845
+Book with id: 1 was found in local cache  : 15:54:35.812845
