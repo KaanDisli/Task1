@@ -20,9 +20,6 @@ class Users:
                     );
 """)
         self.conn.commit()
-        with open('bookcache.json', 'w') as f:
-            pass 
-        self.conn.commit()
         self.highest_id = self.highest_id()
 
     def add_log(self,message):
@@ -54,13 +51,10 @@ class Users:
         return True
 
     def check_user_exists(self,user_id):
-        print("we are inside check_user")
         self.cur.execute("""
         SELECT * FROM users WHERE id = (%s)
                          """, (user_id,))
         query_result = self.cur.fetchone()
-        print("query_Result: ")
-        print(query_result)
         if query_result == None:
             return False
         return True

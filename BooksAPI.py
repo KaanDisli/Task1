@@ -1,17 +1,14 @@
 from flask import Flask, request, jsonify
 from services import book_service,book_functions,user_functions,user_service
 import json
-import cachetools
-from cachetools import TTLCache
 import copy
 from datetime import datetime
+
 
 
 app = Flask(__name__)
 books = book_service.Books() 
 users = user_service.Users()  
-cache = TTLCache(maxsize=100, ttl=900)
-cache['not_expired'] = True
 
 #the home page
 @app.route("/")
@@ -43,6 +40,8 @@ def addBook(user_id):
     if not book_functions.check_params_add(body):
         return {"status": 400 , "message":"Missing parameters" }
     if books.add_book(body): 
+        body_ = (body["title"],body["author"],body["price"],body["category"])
+        #book_functions.add_to_cache(body_)
         book_functions.log(f"A book was added to the db by {user_id} ")
         title = body["title"]
         users.add_log(f"A book with title {title} was added to the db by User {user_id} ")
@@ -54,16 +53,13 @@ def addBook(user_id):
 @app.route("/api/get/book/<book_id>",methods=["GET"])
 def getBook(book_id):
     book_functions.log(f"request recieved on /api/get/{book_id}")
-    json_cache = "bookcache.json"
-    data = book_functions.fetch_data(cache=cache,json_cache=json_cache,method="GET",book_id=book_id,category=None)
-    
+    data = book_functions.fetch_data(method="GET",book_id=book_id,category=None)
     return data
 
 @app.route("/api/get/category/<category>",methods=["GET"])
 def getCategory(category):
     book_functions.log(f"request recieved on /api/get/category/{category}")
-    json_cache = "bookcache.json"
-    data = book_functions.fetch_data(cache=cache,json_cache=json_cache,method="GET",book_id=None,category=category)
+    data = book_functions.fetch_data(method="GET",book_id=None,category=category)
     return data
 
 
@@ -75,8 +71,7 @@ def deleteBook(book_id,user_id):
         return {"status": 400 , "message":"User doesn't exist" }
     #if the  deleted bookid is present in cache we remove it from cache
     try:
-        with open("bookcache.json","r") as file:
-            json_data = json.load(file)
+        json_data = book_functions.redis_client_get()
     except Exception:
         json_data = None
     if json_data is not None:
@@ -101,8 +96,7 @@ def updateBook(book_id,user_id):
     if not book_functions.check_params_add(body):
         return {"status": 400 , "message":"Missing parameters" }
     try:
-        with open("bookcache.json","r") as file:
-            json_data = json.load(file)
+        json_data = book_functions.redis_client_get()
     except Exception:
         json_data = None
     if json_data is not None:

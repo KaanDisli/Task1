@@ -13,8 +13,6 @@ class Books:
                     category VARCHAR(255)
                     );
 """)
-        with open('bookcache.json', 'w') as f:
-            pass 
         self.conn.commit()
         self.highest_id = self.highest_id()
 
