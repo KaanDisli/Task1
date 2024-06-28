@@ -41,19 +41,40 @@ def add_to_cache(body):
     else:
         redis_client.set("library_data",body,ex=900)
         
+def key_index(key):
 
-    
+    if key == "id":
+        return 0
+    if key == "title":
+        return 1
+    if key == "author":
+        return 2
+    if key == "price":
+        return 3
+    if key == "category":
+        return 4 
+    else:
+        return -1
 #we update the book with the id passed as parameter from the cache
-def update_in_cache(id,list,title,author,price,category):
+def update_in_cache(id,book_list,body):
+    for e in body:
+        key = e
+        value = body[key]
+        
+    index = key_index(key)
     id = int(id)
-    for elem in list:
-        id_, title_, author_, price_, category_ = elem
+    for elem in book_list:
+        id_, title, author, price, category = elem
+
         if id_ == id:   
             #update the cache
-            list.remove(elem)
-            log(f"Book  with id: {id} was updated in cache.\n Previously: {elem} \n Now: {(id ,title, author, price,category)}")
-            list.append((id ,title, author, price,category)) 
-            json_data = json.dumps(list)
+            temp_list = list(elem)
+            temp_list[index] = value 
+            id_, title_, author_, price_, category_ = temp_list
+            book_list.remove(elem)
+            log(f"Book  with id: {id} was updated in cache.\n Previously: {elem} \n Now: {(id_, title_, author_, price_, category_)}")
+            book_list.append((id_, title_, author_, price_, category_)) 
+            json_data = json.dumps(book_list)
             redis_client.set("library_data",json_data,ex=900)
             return True
             
@@ -159,3 +180,14 @@ def check_params_add(body):
         if elem not in body:
             return False
     return True
+
+def check_params_update(body):
+    l = ['title','author','price','category']
+    print(len(body))
+    if len(body) !=  1:
+        return False
+    for elem in body:
+        if elem not in l:
+            return False
+    return True
+        

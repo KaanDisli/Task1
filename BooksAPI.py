@@ -93,18 +93,17 @@ def updateBook(book_id,user_id):
     if not users.check_user_exists(user_id):
         return {"status": 400 , "message":"User doesn't exist" }
     body = request.json 
-    if not book_functions.check_params_add(body):
-        return {"status": 400 , "message":"Missing parameters" }
+    if not book_functions.check_params_update(body):
+        return {"status": 400 , "message":"Incorrect parameters" }
     try:
         json_data = book_functions.redis_client_get()
     except Exception:
         json_data = None
     if json_data is not None:
-        book_functions.update_in_cache(book_id,json_data,body["title"],body["author"],body["price"],body["category"])
-    if books.update_book(book_id,body["title"],body["author"],body["price"],body["category"]):
+        book_functions.update_in_cache(book_id,json_data,body)
+    if books.update_book(book_id,body):
         book_functions.log(f"Book with id: {book_id} was updated in the db")
-        title = body["title"]
-        users.add_log(f"A book with title {title} was modified in the db by User {user_id} ")
+        users.add_log(f"A book with id  {book_id} was modified in the db by User {user_id} ")
         return {"status": "200", "message": "Book Succesfully updated"}
     else:
         return {"status": "404" , "message": "There was an error updating the book"}

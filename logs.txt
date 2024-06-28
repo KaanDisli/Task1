@@ -882,3 +882,145 @@ Book with category: School was found in local cache  : 15:52:51.234540
 request recieved on /api/get/1 : 15:54:33.724663
 Fetched books from local cache : 15:54:35.811845
 Book with id: 1 was found in local cache  : 15:54:35.812845
+request recieved on /api/get/2 : 12:09:36.665297
+Fetched books from local cache : 12:09:38.857593
+Creating Local cache : 12:09:38.859543
+request recieved on /api/get/4 : 12:09:49.840892
+Fetched books from local cache : 12:09:49.843679
+Book with id: 4 was found in local cache  : 12:09:49.845684
+request recieved on /api/get/Novel : 12:16:21.959088
+Fetched books from local cache : 12:16:24.012791
+request recieved on /api/get/"Novel" : 12:16:42.382619
+Fetched books from local cache : 12:16:42.385620
+request recieved on /api/get/category/Novel : 12:17:17.338431
+Fetched books from local cache : 12:17:17.341431
+Creating Local cache : 12:17:17.344437
+Book with category: Novel was found in local cache  : 12:17:17.402626
+request recieved on /api/get/category/School : 12:17:30.681825
+Fetched books from local cache : 12:17:30.684822
+Creating Local cache : 12:17:30.685825
+Book with category: School was found in local cache  : 12:17:30.688830
+request recieved on /api/get/category/School : 12:18:38.322370
+Fetched books from local cache : 12:18:38.331367
+Creating Local cache : 12:18:38.334366
+Book with category: School was found in local cache  : 12:18:38.340368
+request recieved on /api/get/category/School : 12:19:09.472035
+Fetched books from local cache : 12:19:09.475035
+Creating Local cache : 12:19:09.477035
+Book with category: School was found in local cache  : 12:19:09.480033
+request recieved on /api/get/category/School : 12:24:29.194812
+Fetched books from local cache : 12:24:31.237992
+Creating Local cache : 12:24:31.239989
+Book with category: School was found in local cache  : 12:24:31.245990
+request recieved on /api/get/category/School : 13:49:28.800478
+Fetched books from local cache : 13:49:31.034955
+Creating Local cache : 13:49:31.036956
+Book with category: School was found in local cache  : 13:49:31.087470
+request recieved on /api/get/category/school : 13:55:40.536529
+Fetched books from local cache : 13:55:42.585744
+Creating Local cache : 13:55:42.586744
+request recieved on /api/get/category/School : 13:55:53.912205
+Fetched books from local cache : 13:55:53.916205
+Creating Local cache : 13:55:53.918208
+Book with category: School was found in local cache  : 13:55:53.921206
+request recieved on /api/get/category/School : 14:04:42.617993
+request recieved on /api/get/1 : 14:04:42.618989
+Fetched books from local cache : 14:04:44.676257
+Book with id: 1 was found in local cache  : 14:04:44.677262
+Creating Local cache : 14:04:44.678259
+Book with category: School was found in local cache  : 14:04:44.753381
+request recieved on /api/get/category/School : 14:04:44.949616
+Fetched books from local cache : 14:04:44.951617
+Creating Local cache : 14:04:44.953625
+Book with category: School was found in local cache  : 14:04:44.956620
+request recieved on /api/get/category/adsjksa : 14:05:08.474232
+Fetched books from local cache : 14:05:08.476234
+Creating Local cache : 14:05:08.478231
+request recieved on /api/delete/1/1 : 14:24:12.311625
+Book with id: 1 was removed from the db : 14:24:14.689739
+request recieved on /api/get/1 : 15:25:25.490267
+Fetched books from local cache : 15:25:27.523911
+Creating Local cache : 15:25:27.525910
+request recieved on /api/get/3 : 15:25:33.327463
+Fetched books from local cache : 15:25:33.330466
+Book with id: 3 was found in local cache  : 15:25:33.331464
+request recieved on /api/update/4 : 15:26:11.929967
+request recieved on /api/update/4 : 15:26:19.476817
+request recieved on /api/update/4 : 15:26:25.365839
+request recieved on /api/update/4 : 15:28:08.636238
+Book  with id: 4 was updated in cache.
+ Previously: [4, 'Matematik', 'MEB', 0, 'School'] 
+ Now: (4, 'Matematik', 'MEB', 500, 'School') : 15:28:10.689021
+request recieved on /api/update/4 : 15:29:00.402353
+Book  with id: 4 was updated in cache.
+ Previously: [4, 'Matematik', 'MEB', 0, 'School'] 
+ Now: (4, 'Matematik', 'MEB', 500, 'School') : 15:29:02.433703
+request recieved on /api/update/4 : 15:32:15.868952
+Book  with id: 4 was updated in cache.
+ Previously: [4, 'Matematik', 'MEB', 500, 'School'] 
+ Now: (4, 'Matematik', 'MEB', 500, 'School') : 15:32:17.914685
+request recieved on /api/update/4 : 15:34:40.147946
+Book  with id: 4 was updated in cache.
+ Previously: [4, 'Matematik', 'MEB', 500, 'School'] 
+ Now: (4, 'Matematik', 'MEB', 500, 'School') : 15:34:42.215437
+Book with id: 4 was updated in the db : 15:34:42.279858
+request recieved on /api/update/4 : 15:37:53.623478
+request recieved on /api/update/4 : 15:39:23.816634
+request recieved on /api/update/4 : 15:41:54.956571
+request recieved on /api/update/4 : 15:42:50.322445
+request recieved on /api/update/4 : 15:44:31.291188
+request recieved on /api/update/4 : 15:45:18.794511
+request recieved on /api/update/4 : 15:45:45.404407
+request recieved on /api/update/4 : 15:47:42.612568
+Book  with id: 4 was updated in cache.
+ Previously: [4, 'Matematik', 'MEB', 500, 'School'] 
+ Now: (4, 'Matematik', 'MEB', 300, 'School') : 15:47:44.650546
+Book with id: 4 was updated in the db : 15:47:44.722888
+request recieved on /api/update/4 : 15:48:02.362520
+request recieved on /api/update/4 : 15:48:56.313108
+Book  with id: 4 was updated in cache.
+ Previously: [4, 'Matematik', 'MEB', 300, 'School'] 
+ Now: (4, 'Matematik', 'MEB', 300, 'School') : 15:48:56.318109
+Book with id: 4 was updated in the db : 15:48:56.324106
+request recieved on /api/update/4 : 15:50:38.766373
+request recieved on /api/update/4 : 15:54:01.499050
+request recieved on /api/update/4 : 15:54:33.193958
+request recieved on /api/update/4 : 15:57:32.682939
+request recieved on /api/update/4 : 16:03:41.067962
+request recieved on /api/update/4 : 16:04:30.731029
+request recieved on /api/update/4 : 16:05:16.253757
+request recieved on /api/update/4 : 16:06:06.878350
+Book with id: 4 was updated in the db : 16:06:08.960543
+request recieved on /api/update/4 : 16:06:58.950261
+Book with id: 4 was updated in the db : 16:07:01.748936
+request recieved on /api/get/4 : 16:07:41.998662
+Fetched books from local cache : 16:07:42.001565
+Creating Local cache : 16:07:42.002567
+Book with id: 4 was found in local cache  : 16:07:42.005566
+request recieved on /api/add/{user_id} : 16:28:16.048587
+A book was added to the db by 1  : 16:28:16.325685
+request recieved on /api/get/4 : 16:28:41.967489
+Fetched books from local cache : 16:28:44.024261
+Creating Local cache : 16:28:44.026262
+Book with id: 4 was found in local cache  : 16:28:44.040961
+request recieved on /api/get/5 : 16:28:50.347605
+Fetched books from local cache : 16:28:50.350612
+Book with id: 5 was found in local cache  : 16:28:50.352610
+request recieved on /api/get/6 : 16:28:54.159564
+Fetched books from local cache : 16:28:54.162566
+Book with id: 6 was found in local cache  : 16:28:54.163696
+request recieved on /api/update/1 : 16:29:27.216246
+request recieved on /api/update/6 : 16:29:56.583400
+Book  with id: 6 was updated in cache.
+ Previously: [6, 'Madame_Bovary', 'Gustav_Flaubert', 100, 'Novel'] 
+ Now: (6, 'Madame_Bovary', 'Gustav_Flaubert', '150', 'Novel') : 16:29:56.589410
+Book with id: 6 was updated in the db : 16:29:56.679321
+request recieved on /api/get/6 : 16:30:02.300245
+Fetched books from local cache : 16:30:02.303245
+Book with id: 6 was found in local cache  : 16:30:02.305254
+request recieved on /api/get/4 : 16:35:19.040071
+Fetched books from local cache : 16:35:19.100695
+Book with id: 4 was found in local cache  : 16:35:19.102690
+request recieved on /api/get/1 : 16:35:22.428964
+Fetched books from local cache : 16:35:22.431963
+Creating Local cache : 16:35:22.433967

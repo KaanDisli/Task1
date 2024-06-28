@@ -82,10 +82,14 @@ class Books:
             return False
         return True
     
-    def update_book(self,book_id,title,author,price,category):
+    def update_book(self,book_id,body):
+        for e in body:
+            key=e
+            value = body[key]
+        
         print("we arrived at update_book")
         try:
-            self.cur.execute("UPDATE books SET title = (%s), author = (%s), price = (%s), category =(%s) WHERE books.id = (%s)",(title,author,price,category,book_id,))
+            self.cur.execute(f"UPDATE books SET {key} = {value} WHERE books.id = {book_id}")
             affected_rows = self.cur.rowcount
             self.conn.commit()
             
