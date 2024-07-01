@@ -1024,3 +1024,226 @@ Book with id: 4 was found in local cache  : 16:35:19.102690
 request recieved on /api/get/1 : 16:35:22.428964
 Fetched books from local cache : 16:35:22.431963
 Creating Local cache : 16:35:22.433967
+request recieved on /api/get/4 : 09:13:24.449208
+Fetched books from local cache : 09:13:26.775338
+Creating Local cache : 09:13:26.776335
+Book with id: 4 was found in local cache  : 09:13:26.780331
+request recieved on /api/get/Hello : 09:15:21.315237
+Fetched books from local cache : 09:15:21.318239
+request recieved on /api/get/4 : 09:15:32.182116
+Fetched books from local cache : 09:15:34.202585
+Book with id: 4 was found in local cache  : 09:15:34.203600
+request recieved on /api/get/category/haha : 09:16:05.601647
+Fetched books from local cache : 09:16:05.603649
+Creating Local cache : 09:16:05.604646
+request recieved on /api/get/5 : 11:31:45.988739
+Fetched books from local cache : 11:31:48.121963
+Creating Local cache : 11:31:48.128236
+Book with id: 5 was found in local cache  : 11:31:48.185331
+request recieved on /api/delete/4/1 : 11:32:12.822921
+Book with id: 4 was removed from cache  : 11:32:12.837438
+Book with id: 4 was removed from the db : 11:32:13.082863
+request recieved on /api/update/4 : 11:32:57.412083
+request recieved on /api/update/5 : 11:33:15.364373
+Book  with id: 5 was updated in cache.
+ Previously: [5, 'Satranc', 'Stefan Zweig', 15, 'Novel'] 
+ Now: (5, 'Satranc', 'Stefan Zweig', '0', 'Novel') : 11:33:15.367375
+Book with id: 5 was updated in the db : 11:33:15.408578
+request recieved on /api/get/category/Novel : 11:33:33.396810
+Fetched books from local cache : 11:33:33.399814
+Creating Local cache : 11:33:33.401813
+Book with category: Novel was found in local cache  : 11:33:33.406809
+request recieved on /api/add/{user_id} : 11:35:35.372334
+A book was added to the db by 1  : 11:35:35.671058
+request recieved on /api/get/6 : 11:35:46.788091
+Fetched books from local cache : 11:35:48.813709
+Book with id: 6 was found in local cache  : 11:35:48.815706
+request recieved on /api/get/7 : 11:35:53.690653
+Fetched books from local cache : 11:35:53.693653
+Creating Local cache : 11:35:53.696651
+Book with id: 7 was found in local cache  : 11:35:53.701654
+request recieved on /api/get/5 : 11:55:41.329346
+request recieved on /api/add/{user_id} : 11:56:05.871626
+A book was added to the db by 1  : 11:56:05.975955
+request recieved on /api/get/1 : 11:56:20.191833
+Fetched books from local cache : 11:56:22.319579
+Creating Local cache : 11:56:22.321580
+request recieved on /api/get/8 : 12:03:03.998369
+Fetched books from local cache : 12:03:06.083032
+Book with id: 8 was found in local cache  : 12:03:06.084033
+request recieved on /api/add/{user_id} : 12:27:26.030656
+A book was added to the db by 1  : 12:27:26.208685
+request recieved on /api/add/{user_id} : 14:12:46.648535
+request recieved on /api/add/{user_id} : 14:13:33.485196
+A book was added to the db by 1  : 14:13:33.630608
+request recieved on /api/add/{user_id} : 14:13:38.118181
+A book was added to the db by 1  : 14:13:38.126179
+request recieved on /api/add/{user_id} : 14:13:43.031523
+A book was added to the db by 1  : 14:13:43.050525
+request recieved on /api/add/{user_id} : 14:13:46.794620
+A book was added to the db by 1  : 14:13:46.798619
+request recieved on /api/add/{user_id} : 14:16:13.379132
+A book was added to the db by 1  : 14:16:13.386136
+request recieved on /api/get/3 : 14:16:56.222173
+Fetched books from local cache : 14:16:58.274186
+Creating Local cache : 14:16:58.275186
+request recieved on /api/get/3 : 14:17:35.924584
+Fetched books from local cache : 14:17:35.926585
+request recieved on /api/get/3 : 14:17:37.781460
+Fetched books from local cache : 14:17:37.790461
+request recieved on /api/get/3 : 14:17:39.358657
+Fetched books from local cache : 14:17:39.360654
+request recieved on /api/get/3 : 14:20:35.660483
+Fetched books from local cache : 14:20:37.702549
+request recieved on /api/get/3 : 14:21:13.966741
+Fetched books from local cache : 14:21:16.013870
+Book with id: 3 was found in local cache  : 14:21:16.015869
+request recieved on /api/add/{user_id} : 14:21:44.152229
+A book was added to the db by 1  : 14:21:44.242736
+request recieved on /api/add/{user_id} : 14:32:26.317379
+request recieved on /api/add/{user_id} : 14:32:51.691559
+request recieved on /api/add/{user_id} : 14:42:29.592923
+A book was added to the db by 1  : 14:42:29.767238
+request recieved on /api/get/3 : 14:43:16.500863
+Fetched books from local cache : 14:43:18.558099
+Creating Local cache : 14:43:18.560100
+Book with id: 3 was found in local cache  : 14:43:18.563099
+request recieved on /api/add/{user_id} : 14:43:21.420759
+A book was added to the db by 1  : 14:43:21.425366
+request recieved on /api/get/3 : 15:08:03.175083
+Fetched books from local cache : 15:08:05.233384
+Creating Local cache : 15:08:05.235383
+Book with id: 3 was found in local cache  : 15:08:05.239382
+request recieved on /api/get/category/School : 15:08:10.114067
+request recieved on /api/get/20 : 15:11:49.282353
+Fetched books from local cache : 15:11:51.329954
+Book with id: 3 was found in local cache  : 15:11:51.331956
+request recieved on /api/add/{user_id} : 15:23:00.846270
+A book was added to the db by 1  : 15:23:00.858242
+request recieved on /api/add/{user_id} : 15:23:05.771127
+A book was added to the db by 1  : 15:23:05.779134
+request recieved on /api/add/{user_id} : 15:23:10.921113
+A book was added to the db by 1  : 15:23:10.927111
+request recieved on /api/add/{user_id} : 15:23:14.500873
+A book was added to the db by 1  : 15:23:15.532670
+request recieved on /api/add/{user_id} : 15:23:17.574118
+request recieved on /api/get/category/School : 15:53:14.111710
+request recieved on /api/get/category/School : 15:53:50.217975
+Fetched books from local cache : 15:53:52.265577
+Creating Local cache : 15:53:52.266580
+Book with category: School was found in local cache  : 15:53:52.273088
+request recieved on /api/get/category/School : 15:54:44.189828
+Fetched books from local cache : 15:54:46.229608
+Creating Local cache : 15:54:46.231609
+request recieved on /api/get/category/School : 15:55:05.558742
+Fetched books from local cache : 15:55:07.606955
+Creating Local cache : 15:55:07.607953
+request recieved on /api/get/category/School : 15:59:01.281311
+Fetched books from local cache : 15:59:03.324693
+Creating Local cache : 15:59:03.327696
+Book with category: School was found in local cache  : 15:59:03.330692
+request recieved on /api/get/category/School : 16:02:50.049110
+Fetched books from local cache : 16:02:52.095035
+Creating Local cache : 16:02:52.096034
+Book with category: School was found in local cache  : 16:02:52.099033
+request recieved on /api/get/category/School : 16:02:53.953311
+Fetched books from local cache : 16:02:53.955314
+Creating Local cache : 16:02:53.956315
+Book with category: School was found in local cache  : 16:02:53.959312
+request recieved on /api/get/category/School : 16:03:20.210772
+Fetched books from local cache : 16:03:22.250173
+Creating Local cache : 16:03:22.251172
+Book with category: School was found in local cache  : 16:03:22.255173
+request recieved on /api/get/category/School : 16:03:31.697759
+Fetched books from local cache : 16:03:31.700760
+Creating Local cache : 16:03:31.702761
+Book with category: School was found in local cache  : 16:03:31.704759
+request recieved on /api/get/3 : 16:03:38.146151
+Fetched books from local cache : 16:03:38.149150
+Book with id: 3 was found in local cache  : 16:03:38.151150
+request recieved on /api/get/3 : 16:04:07.875123
+Fetched books from local cache : 16:04:09.911205
+Book with id: 3 was found in local cache  : 16:04:09.912204
+request recieved on /api/get/3 : 16:05:15.463894
+Fetched books from local cache : 16:05:17.518254
+Book with id: 3 was found in local cache  : 16:05:17.520253
+request recieved on /api/get/3 : 16:11:38.427691
+Fetched books from local cache : 16:11:40.478839
+Book with id: 3 was found in local cache  : 16:11:40.481842
+request recieved on /api/get/3 : 16:11:42.470050
+Fetched books from local cache : 16:11:42.473048
+Book with id: 3 was found in local cache  : 16:11:42.474048
+request recieved on /api/get/3 : 16:11:58.751957
+Fetched books from local cache : 16:12:00.802907
+Book with id: 3 was found in local cache  : 16:12:00.803908
+Currently, average response time is : -2.053952932357788, the error rate is: -0.0, the request count is : 1  : 16:12:00.805910
+request recieved on /api/get/4 : 16:12:19.372858
+Fetched books from local cache : 16:12:19.375859
+Book with id: 4 was found in local cache  : 16:12:19.377859
+Currently, average response time is : -1.0304782390594482, the error rate is: -0.0, the request count is : 2  : 16:12:19.379861
+request recieved on /api/add/{user_id} : 16:12:24.046561
+request recieved on /api/add/{user_id} : 16:12:26.826973
+request recieved on /api/add/{user_id} : 16:12:28.392892
+request recieved on /api/add/{user_id} : 16:14:16.782081
+Currently, average response time is : -0.045003414154052734, the error rate is: -2222.053634812829, the request count is : 1  : 16:14:16.826085
+request recieved on /api/add/{user_id} : 16:14:22.356688
+Currently, average response time is : -0.02450394630432129, the error rate is: -4080.975315488874, the request count is : 2  : 16:14:22.360692
+request recieved on /api/add/{user_id} : 16:14:40.603781
+Currently, average response time is : -0.01766832669576009, the error rate is: -5659.845537268519, the request count is : 3  : 16:14:40.607779
+request recieved on /api/add/{user_id} : 16:14:41.931223
+Currently, average response time is : -0.014751434326171875, the error rate is: -6779.001810188776, the request count is : 4  : 16:14:41.937224
+request recieved on /api/add/{user_id} : 16:18:01.905475
+A book was added to the db by 1  : 16:18:02.077942
+Currently, average response time is : -0.20546936988830566, the error rate is: -0.0, the request count is : 1  : 16:18:02.110944
+request recieved on /api/add/{user_id} : 16:18:05.327884
+Currently, average response time is : -0.13587260246276855, the error rate is: -367.99177386552867, the request count is : 2  : 16:18:05.394160
+request recieved on /api/add/{user_id} : 16:18:09.382314
+A book was added to the db by 1  : 16:18:09.386313
+Currently, average response time is : -0.09258174896240234, the error rate is: -360.04216497217044, the request count is : 3  : 16:18:09.388314
+request recieved on /api/add/{user_id} : 16:20:22.056003
+Currently, average response time is : 0.22308731079101562, the error rate is: 100.0, the request count is : 1  : 16:20:22.280091
+request recieved on /api/get/4 : 16:20:27.938030
+Fetched books from local cache : 16:20:30.016744
+Creating Local cache : 16:20:30.018747
+Book with id: 4 was found in local cache  : 16:20:30.022745
+Currently, average response time is : 1.1544016599655151, the error rate is: 50.0, the request count is : 2  : 16:20:30.023746
+request recieved on /api/get/4 : 16:20:31.462872
+Fetched books from local cache : 16:20:31.464873
+Book with id: 4 was found in local cache  : 16:20:31.466873
+Currently, average response time is : 0.7712680498758951, the error rate is: 33.33333333333333, the request count is : 3  : 16:20:31.468874
+request recieved on /api/get/4 : 16:20:32.852613
+Fetched books from local cache : 16:20:32.854610
+Book with id: 4 was found in local cache  : 16:20:32.856611
+Currently, average response time is : 0.5797005891799927, the error rate is: 25.0, the request count is : 4  : 16:20:32.857611
+request recieved on /api/get/category/School : 16:20:55.665066
+Fetched books from local cache : 16:20:55.670066
+Creating Local cache : 16:20:55.672066
+Book with category: School was found in local cache  : 16:20:55.675066
+Currently, average response time is : 0.4659608840942383, the error rate is: 20.0, the request count is : 5  : 16:20:55.676068
+request recieved on /api/get/20 : 16:21:07.926329
+Fetched books from local cache : 16:21:07.928844
+Book with serialNumber: 20 was found in local cache  : 16:21:07.930843
+Currently, average response time is : 0.38921964168548584, the error rate is: 16.666666666666664, the request count is : 6  : 16:21:07.931843
+request recieved on /api/get/5 : 16:29:37.418694
+Fetched books from local cache : 16:29:39.469520
+Book with id: 5 was found in local cache  : 16:29:39.470520
+Currently, average response time is : 2.0528295040130615, the error rate is: 0.0, the request count is : 1  : 16:29:39.471524
+request recieved on /api/get/category/Novel : 16:29:49.387404
+Fetched books from local cache : 16:29:49.390408
+Creating Local cache : 16:29:49.392408
+Book with category: Novel was found in local cache  : 16:29:49.456409
+Currently, average response time is : 1.061417579650879, the error rate is: 0.0, the request count is : 2  : 16:29:49.457410
+request recieved on /api/update/5 : 16:31:48.190171
+Book  with id: 5 was updated in cache.
+ Previously: [5, 'Inklap tarihi 5', 'MEB', 20, 'School', '70'] 
+ Now: (5, 'Inklap tarihi 5', 'MEB', '99', 'School', '70') : 16:31:48.211173
+Book with id: 5 was updated in the db : 16:31:48.325719
+Currently, average response time is : 0.7729150454203287, the error rate is: 0.0, the request count is : 3  : 16:31:48.386081
+request recieved on /api/get/5 : 16:31:54.415249
+Fetched books from local cache : 16:31:54.418249
+Book with id: 5 was found in local cache  : 16:31:54.419249
+Currently, average response time is : 0.5809363722801208, the error rate is: 0.0, the request count is : 4  : 16:31:54.420249
+request recieved on /api/get/70 : 16:34:12.840758
+Fetched books from local cache : 16:34:12.844755
+Book with serialNumber: 70 was found in local cache  : 16:34:12.848762
+Currently, average response time is : 0.46654863357543946, the error rate is: 0.0, the request count is : 5  : 16:34:12.849756

@@ -56,6 +56,14 @@ def getBook(book_id):
     data = book_functions.fetch_data(method="GET",book_id=book_id,category=None)
     return data
 
+@app.route("/api/get/book/<book_id>",methods=["GET"])
+def getBook(book_id):
+    book_functions.log(f"request recieved on /api/get/{book_id}")
+    data = book_functions.fetch_data(method="GET",book_id=book_id,category=None)
+    return data
+
+
+
 @app.route("/api/get/category/<category>",methods=["GET"])
 def getCategory(category):
     book_functions.log(f"request recieved on /api/get/category/{category}")

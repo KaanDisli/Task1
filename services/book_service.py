@@ -10,7 +10,8 @@ class Books:
                     title VARCHAR(255),
                     author VARCHAR(255),
                     price INT,
-                    category VARCHAR(255)
+                    category VARCHAR(255),
+                    serialNumber VARCHAR(255) UNIQUE
                     );
 """)
         self.conn.commit()
@@ -30,10 +31,12 @@ class Books:
             print(body)
             print(self.highest_id)
             self.highest_id = self.highest_id + 1
-            self.cur.execute("INSERT into books (id,title,author,price,category) VALUES(%s,%s,%s,%s,%s)", (self.highest_id,body["title"],body["author"],body["price"],body["category"]) )
+            self.cur.execute("INSERT into books (id,title,author,price,category,serialNumber) VALUES(%s,%s,%s,%s,%s,%s)", (self.highest_id,body["title"],body["author"],body["price"],body["category"],body["serialNumber"]) )
             self.conn.commit()
         except Exception as e:
             print("There was an error inserting the book: ", e)
+            if self.conn is not None:
+                self.conn.rollback()
             return False
         return True
     
@@ -48,7 +51,8 @@ class Books:
                     "title": query_result[1],
                     "author": query_result[2],
                     "price": query_result[3],
-                    "category":query_result[4]
+                    "category":query_result[4],
+                    "serialNumber":query_result[5]
 
             }
         except Exception as e:

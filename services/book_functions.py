@@ -8,11 +8,24 @@ from datetime import datetime
 import redis
 from BooksAPI import books
 
-
+import time 
 redis_client = redis.Redis(host='localhost',port = 6379, db=0)
 
 
-
+def get_serialNumber_cache(serialNumber):
+        byte_string = redis_client.get("library_data")
+        json_data = None
+        if byte_string != None:
+            json_string = byte_string.decode('utf-8')
+            json_data = json.loads(json_string)
+            for elem in json_data:
+                id, title, author, price, category, serialNumber_ = elem
+                if serialNumber_ == serialNumber:
+                    log(f"Book with serialNumber: {serialNumber} was found in local cache ")
+                    return True, {
+                        "id":id,"title":title,"author":author,"price":price, "category":category, "serialNumber":serialNumber
+                    }
+        return False, {"status": 403, "message":"Book does not exist"}
 
 def redis_client_get():
         byte_string = redis_client.get("library_data")
@@ -26,21 +39,7 @@ def log(message):
         current_time = datetime.now().time()
         with open("logs.txt","a") as file:
             file.write(f'{message} : {current_time}\n')
-        
-def add_to_cache(body):
-    print("this is the body")
-    print(body)
-    byte_string = redis_client.get("library_data")
-    json_data = None
-    if byte_string != None:
-        json_string = byte_string.decode('utf-8')
-        json_data = json.loads(json_string)
-        json_data = json.dumps(json_data)
-        redis_client.set("library_data",json_data,ex=900)
-        
-    else:
-        redis_client.set("library_data",body,ex=900)
-        
+
 def key_index(key):
 
     if key == "id":
@@ -64,16 +63,16 @@ def update_in_cache(id,book_list,body):
     index = key_index(key)
     id = int(id)
     for elem in book_list:
-        id_, title, author, price, category = elem
+        id_, title, author, price, category, serialNumber = elem
 
         if id_ == id:   
             #update the cache
             temp_list = list(elem)
             temp_list[index] = value 
-            id_, title_, author_, price_, category_ = temp_list
+            id_, title_, author_, price_, category_ , serialNumber_= temp_list
             book_list.remove(elem)
-            log(f"Book  with id: {id} was updated in cache.\n Previously: {elem} \n Now: {(id_, title_, author_, price_, category_)}")
-            book_list.append((id_, title_, author_, price_, category_)) 
+            log(f"Book  with id: {id} was updated in cache.\n Previously: {elem} \n Now: {(id_, title_, author_, price_, category_, serialNumber)}")
+            book_list.append((id_, title_, author_, price_, category_, serialNumber_)) 
             json_data = json.dumps(book_list)
             redis_client.set("library_data",json_data,ex=900)
             return True
@@ -102,21 +101,21 @@ def remove_from_cache(id,list):
 def search_id_list(id,list):
     id = int(id)
     for elem in list:
-        id_, title, author, price, category = elem
+        id_, title, author, price, category, serialNumber = elem
         if id_ == id:   
             log(f"Book with id: {id} was found in local cache ")
             return True, {
-                "id":id,"title":title,"author":author,"price":price, "category":category
+                "id":id,"title":title,"author":author,"price":price, "category":category, "serialNumber":serialNumber
             }
     return False, {"status": 403, "message":"Book does not exist"}
 
 def search_category_cache(category,list):
     new_list = []
     for elem in list:
-        id_, title_, author_, price_, category_ = elem
+        id_, title_, author_, price_, category_, serialNumber_ = elem
         if category == category_:
             new_list.append({
-                "id":id_,"title":title_,"author":author_,"price":price_, "category":category_
+                "id":id_,"title":title_,"author":author_,"price":price_, "category":category_, "serialNumber": serialNumber_
             }
 
             )
@@ -128,7 +127,7 @@ def search_category_cache(category,list):
     else:
         return False, json_string
 
-def fetch_data(*,method = "GET",book_id,category):
+def fetch_data(*,method = "GET",book_id,category,serialNumber):
     #if the cache has expired we need to make a db query for the json data
     try:
         #if the cache has not expired we open the local cache
@@ -150,7 +149,11 @@ def fetch_data(*,method = "GET",book_id,category):
         #if the book can be found in the local cache we return it, if not we expire the timer on the cache make a db query
     if json_data != None:
         if category == None:
-            status, message =  search_id_list(book_id,json_data) 
+            if serialNumber == None:
+                status, message =  search_id_list(book_id,json_data)
+            else: 
+                status, message =  get_serialNumber_cache(serialNumber)
+
             if status:
                 return message
             else:
@@ -167,7 +170,10 @@ def fetch_data(*,method = "GET",book_id,category):
             redis_client.set("library_data", json.dumps(json_data), ex=900)
     #after making our query and writing it in the local cache we return if it is present as a book or not    
     if category == None:
-        status, message =  search_id_list(book_id,json_data) 
+        if serialNumber == None:
+            status, message =  search_id_list(book_id,json_data) 
+        else:
+            status, message = get_serialNumber_cache(serialNumber)
     else: 
         status, message =  search_category_cache(category,json_data) 
     return message
@@ -175,14 +181,15 @@ def fetch_data(*,method = "GET",book_id,category):
 
 
 def check_params_add(body):
-    l = ['title','author','price','category']
+
+    l = ['title','author','price','category','serialNumber']
     for elem in l: 
         if elem not in body:
             return False
     return True
 
 def check_params_update(body):
-    l = ['title','author','price','category']
+    l = ['title','author','price','category','serialNumber']
     print(len(body))
     if len(body) !=  1:
         return False
